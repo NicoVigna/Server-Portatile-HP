@@ -18,7 +18,7 @@ sudo systemctl enable tlp
 
 <!-- purtroppo non funziona -->
 
-nico@Server-HP:~$ sudo tlp-stat -b
+user@host:~$ sudo tlp-stat -b
 --- TLP 1.8.0 --------------------------------------------
 
 +++ Battery Care

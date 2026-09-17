@@ -1,2 +1,2 @@
 # Server-Portatile-HP
-Documentazione dei progessi sul server di casa
+Documentazione dei progressi di configurazione del server portatile HP

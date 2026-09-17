@@ -8,13 +8,13 @@ sudo inxi -Fxxxa
 
 ## Sistema
 
-- Host: `Server-HP` (prompt: `nico@Server-HP:~$`)
+- Host: `[REDACTED_HOST]` (prompt: `user@host:~$`)
 - Distribuzione: Debian GNU/Linux 13 (trixie)
 - Kernel: `6.12.107+deb13-amd64`
 - Architettura: `x86_64`, 64 bit
 - Compilatore kernel: GCC `14.2.0`
 - Clocksource: `tsc`; disponibili: `acpi_pm`
-- Parametri di avvio: `BOOT_IMAGE=/boot/vmlinuz-6.12.107+deb13-amd64 root=UUID=75e07175-114a-4a7f-859d-cd4dfb63f248 ro quiet`
+- Parametri di avvio: `[REDACTED_BOOT_PARAMETERS]`
 - Console: `pty pts/2`
 - Init: `systemd` versione `257`
 - Shell: Bash versione `5.2.37`
@@ -29,11 +29,11 @@ sudo inxi -Fxxxa
 - Prodotto: HP x2 Detachable 10-p0XX
 - Versione prodotto: `N/A`
 - Scheda madre: HP `827C`, versione `93.23`
-- Numero di serie sistema: `5CD63532RG`
+- Numero di serie sistema: `[REDACTED]`
 - Chassis: tipo `32`, seriale `N/A`
-- Numero di serie scheda madre: `PGBVE018J390U5`
-- Codice parte: `Y3W89EA#ABZ`
-- UUID scheda madre: `36444335-3533-3233-5247-473235334435`
+- Numero di serie scheda madre: `[REDACTED]`
+- Codice parte: `[REDACTED]`
+- UUID scheda madre: `[REDACTED]`
 - UEFI: American Megatrends `F.21`, del 10 maggio 2017
 
 ## Batteria
@@ -46,7 +46,7 @@ sudo inxi -Fxxxa
 - Tensione: `8.6 V`; minima: `7.7 V`
 - Modello: `Intel SR 1 SR Real Battery`
 - Tecnologia: agli ioni di litio (`Li-ion`)
-- Numero di serie: `123456789`
+- Numero di serie: `[REDACTED]`
 - Stato: completamente carica (`full`)
 
 ## Processore
@@ -107,7 +107,7 @@ sudo inxi -Fxxxa
 - Cheng Uei Precision Industry (Foxlink) HP TrueVision HD
 - Driver: `uvcvideo`; USB 2.0, 480 Mb/s, 1 lane, modalita 2.0
 - Bus: `1-4.2:5`; chip ID: `05c8:03a3`; classe: `0e02`
-- Numero di serie: `200901010001`
+- Numero di serie: `[REDACTED]`
 
 ## Audio
 
@@ -123,18 +123,18 @@ sudo inxi -Fxxxa
 
 - Intel Wireless 3165, driver `iwlwifi` versione kernel
 - PCIe Gen 1, 2.5 GT/s, 1 lane; bus `01:00.0`; chip ID `8086:3165`; classe `0280`
-- Interfaccia `wlo1`: attiva; MAC `78:92:9c:fc:5b:0c`
+- Interfaccia `wlo1`: attiva; MAC `[REDACTED]`
 
 ### Interfacce Docker
 
-- `br-259d784bc51c`: inattiva, MAC `4a:29:2a:6c:00:79`
-- `br-72d87e6e866f`: attiva, 10000 Mbps, duplex sconosciuto, MAC `92:c8:b0:79:e1:7f`
-- `br-d986cc8017c1`: attiva, 10000 Mbps, duplex sconosciuto, MAC `32:8b:16:be:ea:6a`
-- `br-f4d2a5c9f92c`: attiva, 10000 Mbps, duplex sconosciuto, MAC `9e:ad:39:ca:40:7b`
-- `docker0`: inattiva, MAC `d2:a3:4d:50:55:32`
-- `veth2512b3a`: attiva, 10000 Mbps, full duplex, MAC `fa:a0:e5:91:4d:b2`
-- `veth97db2a9`: attiva, 10000 Mbps, full duplex, MAC `36:d2:c1:8a:94:3d`
-- `vethe6acce8`: attiva, 10000 Mbps, full duplex, MAC `16:18:a0:56:19:90`
+- `br-259d784bc51c`: inattiva, MAC `[REDACTED]`
+- `br-72d87e6e866f`: attiva, 10000 Mbps, duplex sconosciuto, MAC `[REDACTED]`
+- `br-d986cc8017c1`: attiva, 10000 Mbps, duplex sconosciuto, MAC `[REDACTED]`
+- `br-f4d2a5c9f92c`: attiva, 10000 Mbps, duplex sconosciuto, MAC `[REDACTED]`
+- `docker0`: inattiva, MAC `[REDACTED]`
+- `veth2512b3a`: attiva, 10000 Mbps, full duplex, MAC `[REDACTED]`
+- `veth97db2a9`: attiva, 10000 Mbps, full duplex, MAC `[REDACTED]`
+- `vethe6acce8`: attiva, 10000 Mbps, full duplex, MAC `[REDACTED]`
 
 ### Servizi rilevati
 
@@ -153,7 +153,7 @@ sudo inxi -Fxxxa
 
 - Spazio totale: `58.24 GiB`; utilizzato: `6.55 GiB` (11.2%)
 - Dispositivo: `/dev/mmcblk1`; SK Hynix `HCG4a2`; tecnologia SSD rimovibile
-- Major-minor: `179:0`; seriale: `0x1f156c78`; firmware: `0x8`
+- Major-minor: `179:0`; seriale: `[REDACTED]`; firmware: `0x8`
 - Schema: GPT; blocco fisico/logico: 512/512 B
 - SMART: `smartctl` non installato
 
