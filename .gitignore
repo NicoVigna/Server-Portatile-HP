@@ -1,0 +1,16 @@
+# Local secrets and Compose environment files
+.env
+.env.*
+!.env.example
+
+# Runtime data created by containers
+**/data/
+**/letsencrypt/
+**/work/
+**/conf/
+**/config/
+
+# Local editor and OS files
+.DS_Store
+Thumbs.db
+.vscode/
