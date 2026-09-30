@@ -6,5 +6,6 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
+      - DOCKER_API_VERSION=1.40
       - WATCHTOWER_SCHEDULE=0 0 4 * * *
       - WATCHTOWER_CLEANUP=true

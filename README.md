@@ -23,20 +23,27 @@ disponibili in [Server HP Info.md](Server%20HP%20Info.md) e
 
 ## Container Docker
 
-Ogni servizio ha una cartella autonoma con il proprio `docker-compose.yml`:
+I servizi attualmente utilizzati sono:
 
-| Servizio            | Scopo                                  | Cartella                  |
-| ------------------- | -------------------------------------- | ------------------------- |
-| AdGuard Home        | DNS locale e filtraggio                | [AdGuard](AdGuard/)       |
-| DuckDNS             | Aggiornamento del record DNS dinamico  | [Duckdns](Duckdns/)       |
-| Nginx Proxy Manager | Reverse proxy e certificati TLS        | [npm](npm/)               |
-| wg-easy             | VPN WireGuard e gestione dei client    | [vpn](vpn/)               |
-| Watchtower          | Aggiornamento e pulizia delle immagini | [WatchTower](WatchTower/) |
+| Servizio            | Stato  | Scopo                                  | Cartella                  |
+| ------------------- | ------ | -------------------------------------- | ------------------------- |
+| AdGuard Home        | Attivo | DHCP, DNS locale e filtraggio          | [AdGuard](AdGuard/)       |
+| Nginx Proxy Manager | Attivo | Reverse proxy e certificati TLS        | [npm](npm/)               |
+| wg-easy             | Attivo | VPN WireGuard e gestione dei client    | [vpn](vpn/)               |
+| Watchtower          | Attivo | Aggiornamento e pulizia delle immagini | [WatchTower](WatchTower/) |
 
-Il flusso previsto è: risoluzione del nome pubblico tramite DuckDNS, ingresso
-controllato dal reverse proxy o dalla VPN, quindi instradamento verso i servizi
-interni. Le porte e gli indirizzi effettivi dipendono dalla rete locale e non sono
-inclusi nella documentazione pubblica.
+La cartella [Duckdns](Duckdns/) è conservata come riferimento storico, ma il
+container DuckDNS non è più utilizzato: dietro CGNAT TIM FWA non risolve il
+problema dell'accesso in ingresso. Il tunnel Cloudflare Zero Trust è stato
+testato e successivamente smantellato; non fa parte dei servizi attivi o dei
+file versionati.
+
+Il flusso attuale è interamente interno: AdGuard assegna gli indirizzi tramite
+DHCP e risolve i domini locali, mentre Nginx Proxy Manager riceve le richieste
+Web sulla rete LAN e le inoltra ai servizi interni. Il server è collegato via
+Ethernet e utilizza un indirizzo locale riservato. Non sono previsti accessi in
+ingresso da Internet. I dettagli dell'architettura sono descritti in
+[Architettura rete](Rete/Architettura%20rete.md).
 
 ## Sicurezza e privacy
 
@@ -56,13 +63,14 @@ Questo repository è strutturato per dimostrare competenze pratiche nelle seguen
 - **Containerizzazione:** Deploy, aggiornamento e gestione di servizi tramite Docker e Docker Compose (es. Watchtower).
 - **Networking e Accessi:** Configurazione di tunnel VPN (WireGuard) per l'accesso remoto sicuro, gestione del DNS locale e filtraggio (AdGuard Home) e configurazione di DNS dinamico (DuckDNS).
 - **Gestione Traffico Web:** Configurazione di Reverse Proxy (Nginx Proxy Manager) e gestione automatizzata dei certificati TLS.
+- **Rete locale e privacy:** DHCP e DNS centralizzati con AdGuard Home, DNS rewrite locali e upstream cifrati.
 - **Security Best Practices:** Separazione netta tra configurazione versionata e segreti (`.env`), esclusione dei dati sensibili e backup dei dati persistenti.
 
 ## Metodo di Lavoro
 
 Le nuove attività e le modifiche al server vengono documentate seguendo questo schema strutturato:
 
-*   **Problema:** Il problema o la necessità tecnica affrontata.
-*   **Soluzione:** La configurazione o l'architettura adottata per risolvere il caso.
-*   **Azione:** Il comando esatto eseguito.
-*   **Verifica:** Il modo in cui la soluzione è stata testata e confermata.
+- **Problema:** Il problema o la necessità tecnica affrontata.
+- **Soluzione:** La configurazione o l'architettura adottata per risolvere il caso.
+- **Azione:** Il comando esatto eseguito.
+- **Verifica:** Il modo in cui la soluzione è stata testata e confermata.

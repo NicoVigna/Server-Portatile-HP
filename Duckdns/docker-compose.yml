@@ -1,3 +1,5 @@
+# ARCHIVIATO: DuckDNS non e piu utilizzato dietro CGNAT TIM FWA.
+# Il file viene conservato solo come riferimento storico.
 services:
   duckdns:
     image: lscr.io/linuxserver/duckdns:latest
